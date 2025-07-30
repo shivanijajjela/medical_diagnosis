@@ -13,7 +13,7 @@ IMG_SIZE = 64
 
 # Title
 st.title("Medical Image Diagnosis")
-st.write("Upload an image to detect **Pneumonia** or **Brain Tumor** using trained models.")
+st.write("Upload an image to detect Pneumonia or Brain Tumor using trained models.")
 
 # Sidebar model selection
 option = st.sidebar.selectbox(
@@ -46,5 +46,5 @@ if uploaded_file is not None:
             prediction = brain_model.predict(processed_image)[0][0]
             result = "Brain Tumor Detected" if prediction > 0.5 else "No Brain Tumor"
 
-        st.success(f"**Prediction:** {result}")
+        st.success(f"Prediction: {result}")
         st.info(f"Raw Prediction Score: {prediction:.4f}")
